@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: d0158f98f0a476f4da4cfeeffee78f5a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Acme
+  fontNames:
+  - Acme
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e58a6f1b44119154a96879e99ce63590, type: 3}
+  - {fileID: 12800000, guid: 9939812fc0c3c45448d9add03c78ea0e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

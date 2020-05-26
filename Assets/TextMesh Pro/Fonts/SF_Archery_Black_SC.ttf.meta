@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7f89e36995c62254fa2cc897da074997
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SF Archery Black SC
+  fontNames:
+  - SF Archery Black SC
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: be3827a7d7500d34cab580ae37f7670b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
