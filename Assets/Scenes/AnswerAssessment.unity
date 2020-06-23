@@ -744,7 +744,7 @@ PrefabInstance:
     - target: {fileID: 7231283471329439160, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
       propertyPath: m_Text
-      value: Next Level
+      value: Next
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c055c506bb097d94cbb8007e8260962c, type: 3}
@@ -830,6 +830,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355246992355917260, guid: c055c506bb097d94cbb8007e8260962c,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelState
       objectReference: {fileID: 0}
     - target: {fileID: 4355246992355917265, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
@@ -930,7 +935,7 @@ PrefabInstance:
     - target: {fileID: 4355246992355917267, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4355246992355917267, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
@@ -940,7 +945,7 @@ PrefabInstance:
     - target: {fileID: 4355246992355917267, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 1400
       objectReference: {fileID: 0}
     - target: {fileID: 4355246992355917267, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
@@ -1030,17 +1035,17 @@ PrefabInstance:
     - target: {fileID: 7231283471329439160, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7231283471329439160, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7231283471329439160, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c055c506bb097d94cbb8007e8260962c, type: 3}

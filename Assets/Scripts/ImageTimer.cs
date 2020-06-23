@@ -1,30 +1,33 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Timer : MonoBehaviour
+public class ImageTimer : MonoBehaviour
 {
-    public Text timerText;
-    private float timer;
-
-    
+    Image timerBar;
+    public float maxTime = 30f;
+    float timeLeft;
     // Start is called before the first frame update
     void Start()
     {
-        timer = 30.0f;
+        timerBar = GetComponent<Image>();
+        timeLeft = maxTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timerText.text = Convert.ToInt32(timer).ToString();
-        timer -= Time.deltaTime;
-
-        if (timer < 0)
+        if (timeLeft > 0)
         {
+            timeLeft -= Time.deltaTime;
+            timerBar.fillAmount = timeLeft / maxTime;
+        }
+        else
+        {
+            Time.timeScale = 0;
+
             DataHolder.MyAnswer = "time is over";
 
             PlayerPrefs.SetInt("LevelIndex", PlayerPrefs.GetInt("LevelIndex") + 1);
