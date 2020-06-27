@@ -19,20 +19,22 @@ public class ImageTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timeLeft > 0)
+        if (PlayerPrefs.GetInt("Rules") == 1)
         {
-            timeLeft -= Time.deltaTime;
-            timerBar.fillAmount = timeLeft / maxTime;
-        }
-        else
-        {
-            Time.timeScale = 0;
+            if (timeLeft > 0)
+            {
+                timeLeft -= Time.deltaTime;
+                timerBar.fillAmount = timeLeft / maxTime;
+            }
+            else
+            {
+                Time.timeScale = 0;
 
-            DataHolder.MyAnswer = "time is over";
+                //переход на сцену failed
+                PlayerPrefs.SetString("LevelResult", "false");
 
-            PlayerPrefs.SetInt("LevelIndex", PlayerPrefs.GetInt("LevelIndex") + 1);
-            
-            SceneManager.LoadScene(12);
+                SceneManager.LoadScene(12);
+            }
         }
     }
 }

@@ -1041,7 +1041,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d9086097119878d42990a1ff00f98f75,
+      objectReference: {fileID: 21300000, guid: c89c7b9afb961054dafe8e33012bacbe,
         type: 3}
     - target: {fileID: 4355246992355917266, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
@@ -1151,7 +1151,7 @@ PrefabInstance:
     - target: {fileID: 4355246992355917267, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 4355246992355917267, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
@@ -1191,7 +1191,7 @@ PrefabInstance:
     - target: {fileID: 7231283471329439160, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}
       propertyPath: m_Text
-      value: PLAY
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7231283471329439160, guid: c055c506bb097d94cbb8007e8260962c,
         type: 3}

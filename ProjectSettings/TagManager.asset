@@ -13,6 +13,8 @@ TagManager:
   - task4
   - task5
   - LevelNumber
+  - AnswerResults
+  - Restart
   layers:
   - Default
   - TransparentFX

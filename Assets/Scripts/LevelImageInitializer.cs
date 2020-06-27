@@ -8,6 +8,6 @@ public class LevelImageInitializer : MonoBehaviour
     public Image image;
     void Start()
     {
-        DataHolder.LevelSpriteName = image.sprite.name + "_result";
+        PlayerPrefs.SetString("LevelSpriteName", image.sprite.name + "_result");
     }
 }

@@ -18,7 +18,9 @@ public class NextLevel : MonoBehaviour
 
 	void TaskOnClick()
     {   
-        if (PlayerPrefs.GetInt("LevelIndex") > Consts.NUM_OF_LEVEL + 1)
+        PlayerPrefs.SetInt("LevelIndex", PlayerPrefs.GetInt("LevelIndex") + 1);
+        
+        if (PlayerPrefs.GetInt("LevelIndex") > Consts.NUM_OF_LEVEL)
         {
             PlayerPrefs.SetInt("LevelIndex", Consts.FIRST_LEVEL_SCENE_INDEX);
             SceneManager.LoadScene("GameOver");

@@ -9,7 +9,7 @@ public class BackgroundImageLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("LevelIndex") > 7)
+        if (PlayerPrefs.GetInt("LevelIndex") > 6)
         {
             Sprite backgroundSprite = Resources.Load<Sprite>("Background2");
             backgroundImage.GetComponent<Image>().sprite = backgroundSprite;

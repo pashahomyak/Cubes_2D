@@ -5,41 +5,39 @@ using UnityEngine.UI;
 public class LevelResult : MonoBehaviour
 {
     public Image levelImage;
-    public Text trueAnswer;
-    public Text playerAnswer;
 
     void Start()
     {
         GameObject LevelState = GameObject.FindWithTag("LevelState");
 
-        trueAnswer.text = DataHolder.TrueAnswer;
-        playerAnswer.text = DataHolder.MyAnswer;
-
-        Sprite levelSprite = Resources.Load<Sprite>("Levels/" + DataHolder.LevelSpriteName);
+        Sprite levelSprite = Resources.Load<Sprite>("Levels/" + PlayerPrefs.GetString("LevelSpriteName"));
         levelImage.GetComponent<Image>().sprite = levelSprite;
 
-        Sprite redBackSprite = Resources.Load<Sprite>("redBack2");
-        Sprite greenBackSprite = Resources.Load<Sprite>("greenBack");
+        Sprite redBackSprite = Resources.Load<Sprite>("levelBackBlue");
+        Sprite greenBackSprite = Resources.Load<Sprite>("levelBackGreen");
 
-        if (DataHolder.TrueAnswer != DataHolder.MyAnswer)
+        if (PlayerPrefs.GetString("LevelResult") == "false")
         {
-            playerAnswer.color = Color.red;
+            levelImage.transform.localPosition = new Vector3(-2, 47);
 
             LevelState.GetComponent<Image>().sprite = redBackSprite;
             LevelState.GetComponentInChildren<Text>().fontSize = 96;
-            LevelState.GetComponentInChildren<Text>().text = $"FAILED";
+            LevelState.GetComponentInChildren<Text>().text = $"FAILURE";
 
-            PlayerPrefs.SetInt($"statusLevel{PlayerPrefs.GetInt("LevelIndex") - 2}", -1);
+            PlayerPrefs.SetInt($"statusLevel{PlayerPrefs.GetInt("LevelIndex")}", -1);
         }
         else
         {
-            playerAnswer.color = Color.green;
+            //restart
+            GameObject restartButton = GameObject.FindWithTag("Restart");
+            restartButton.SetActive(false);
+            levelImage.transform.localPosition = new Vector3(-2, -67);
+            
             LevelState.GetComponent<Image>().sprite = greenBackSprite;
             LevelState.GetComponentInChildren<Text>().fontSize = 96;
             LevelState.GetComponentInChildren<Text>().text = $"COMPLETED";
 
-            PlayerPrefs.SetInt($"statusLevel{PlayerPrefs.GetInt("LevelIndex") - 2}", 1);
-
+            PlayerPrefs.SetInt($"statusLevel{PlayerPrefs.GetInt("LevelIndex")}", 1);
         }
     }
 }

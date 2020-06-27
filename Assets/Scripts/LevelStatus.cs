@@ -9,7 +9,7 @@ public class LevelStatus : MonoBehaviour
     void Start()
     {
         //обновление для 2 уровня
-        if (PlayerPrefs.GetInt("LevelIndex") - 1 == 6)
+        if (PlayerPrefs.GetInt("LevelIndex") == 6)
         {
             for (int i = 1; i <= 5; i++)
             {
@@ -24,7 +24,7 @@ public class LevelStatus : MonoBehaviour
         }
         
         
-        if (PlayerPrefs.GetInt("LevelIndex") - 1 < 6)
+        if (PlayerPrefs.GetInt("LevelIndex") < 6)
         {
             ChangeLevelStatus(1, 5);
         }
